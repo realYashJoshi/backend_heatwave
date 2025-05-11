@@ -52,7 +52,7 @@ app.get('/api/forecast', async (req, res) => {
 
     res.json({
       source: "api",
-      message: "Data fetched from Open-Meteo API",
+      message: "Data fetched hybrid lstm",
       data: data
     });
   } catch (err) {
