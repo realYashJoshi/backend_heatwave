@@ -95,7 +95,7 @@ app.get('/api/forecast', async (req, res) => {
   if (cache[cacheKey]) {
     return res.json({
       source: "cache",
-      message: "Max temperature served from cache",
+      message: "Max temperature served from  hybrid LSTM cache",
       data: cache[cacheKey]
     });
   }
@@ -124,7 +124,7 @@ app.get('/api/forecast', async (req, res) => {
     // Send response with fetched data
     res.json({
       source: "api",
-      message: "Max temperature fetched from WeatherAPI",
+      message: "Max temperature fetched from hybrid LSTM cache",
       data: forecast
     });
   } catch (err) {
