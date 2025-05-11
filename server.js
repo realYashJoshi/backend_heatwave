@@ -85,9 +85,7 @@ app.get('/api/forecast', async (req, res) => {
   }
 
   // Ensure the number of days does not exceed the free tier limit (max 3 days)
-  if (days > 3) {
-    return res.status(400).json({ error: "Frecast limit reached" });
-  }
+  
 
   // Use today's date to create a cache key
   const today = new Date().toISOString().split('T')[0];
