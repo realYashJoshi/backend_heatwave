@@ -1,9 +1,9 @@
 import express from 'express';
 import fetch from 'node-fetch'; // works now as ESM
-
+import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+app.use(cors());
 app.get('/api/forecast', async (req, res) => {
   const { lat, lon, days } = req.query;
 
